@@ -45,10 +45,33 @@ function addGamesToPage(games) {
 
         // append the game to the games-container
 
+        for (let i = 0; i < games.length; i++) {
+            const game = games[i];
+    
+            // Create the game card
+            const gameCard = document.createElement("div");
+            gameCard.classList.add("game-card");
+    
+            // Set inner HTML with image, name, and description
+            gameCard.innerHTML = `
+                <img src="${game.img}" alt="${game.name}" class="game-img" />
+                <h3>${game.name}</h3>
+                <p>${game.description}</p>
+                <p><strong>Backers:</strong> ${game.backers.toLocaleString()}</p>
+            `;
+    
+            // Append to the container
+            gamesContainer.appendChild(gameCard);
+        }
+
+        
+
 }
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
+addGamesToPage(GAMES_JSON);
+
 
 
 /*************************************************************************************
@@ -59,6 +82,10 @@ function addGamesToPage(games) {
 
 // grab the contributions card element
 const contributionsCard = document.getElementById("num-contributions");
+
+const totalBackers = GAMES_JSON.reduce((acc, game) => acc + game.backers, 0);
+contributionsCard.innerHTML = totalBackers.toLocaleString();
+
 
 // use reduce() to count the number of total contributions by summing the backers
 
@@ -71,9 +98,16 @@ const raisedCard = document.getElementById("total-raised");
 
 // set inner HTML using template literal
 
+const totalRaised = GAMES_JSON.reduce((acc, game) => acc + game.pledged, 0);
+raisedCard.innerHTML = `$${totalRaised.toLocaleString()}`;
+
+
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
+
+gamesCard.innerHTML = GAMES_JSON.length.toLocaleString();
+
 
 
 /*************************************************************************************
@@ -85,6 +119,12 @@ const gamesCard = document.getElementById("num-games");
 // show only games that do not yet have enough funding
 function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
+
+    const unfundedGames = GAMES_JSON.filter(game => game.pledged < game.goal);
+
+    console.log("Unfunded games:", unfundedGames.length); // For Secret Key
+
+    addGamesToPage(unfundedGames);
 
     // use filter() to get a list of games that have not yet met their goal
 
