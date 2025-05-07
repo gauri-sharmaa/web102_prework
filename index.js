@@ -141,6 +141,13 @@ function filterFundedOnly() {
 
 
     // use the function we previously created to add unfunded games to the DOM
+    
+
+    const fundedGames = GAMES_JSON.filter(game => game.pledged >= game.goal);
+
+    console.log("Funded games:", fundedGames.length); // Secret Key Component 2
+
+    addGamesToPage(fundedGames);
 
 }
 
@@ -150,12 +157,23 @@ function showAllGames() {
 
     // add all games from the JSON data to the DOM
 
+
+    addGamesToPage(GAMES_JSON);
+
 }
 
 // select each button in the "Our Games" section
 const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
+
+unfundedBtn.addEventListener("click", filterUnfundedOnly);
+
+unfundedBtn.addEventListener("click", filterUnfundedOnly);
+fundedBtn.addEventListener("click", filterFundedOnly);
+allBtn.addEventListener("click", showAllGames);
+
+
 
 // add event listeners with the correct functions to each button
 
@@ -170,11 +188,21 @@ const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
 
+const numUnfunded = GAMES_JSON.filter(game => game.pledged < game.goal).length;
+
+
 
 // create a string that explains the number of unfunded games using the ternary operator
 
+const displayStr = `A total of $${totalRaised.toLocaleString()} has been raised to bring back ${GAMES_JSON.length} beloved romcoms. Currently, ${numUnfunded} ${numUnfunded === 1 ? "film remains" : "films remain"} unfunded. Help us rekindle the magic of these love stories!`;
+
 
 // create a new DOM element containing the template string and append it to the description container
+
+const description = document.createElement("p");
+description.innerHTML = displayStr;
+descriptionContainer.appendChild(description);
+
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
@@ -184,12 +212,21 @@ const descriptionContainer = document.getElementById("description-container");
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
+// Sort games by pledged amount in descending order
+const sortedGames = [...GAMES_JSON].sort((item1, item2) => {
     return item2.pledged - item1.pledged;
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstGameElement = document.createElement("p");
+firstGameElement.innerText = firstGame.name;
+firstGameContainer.appendChild(firstGameElement);
 
 // do the same for the runner up item
+const secondGameElement = document.createElement("p");
+secondGameElement.innerText = secondGame.name;
+secondGameContainer.appendChild(secondGameElement);
+

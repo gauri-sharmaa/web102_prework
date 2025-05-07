@@ -1,104 +1,93 @@
-// Image credits: Kickstarter
-const games = ` [
+// Image credits: Rom-Com Classics
+const games = `[
   {
-    "name": "Heroes Of Mythic Americas",
-    "description": "An exciting 5e RPG supplement that heroically represents pre-Columbian American cultures and mythologies",
-    "pledged": 1572,
-    "goal": 10000,
-    "backers": 9,
-    "img": "./assets/heroes_of_mythic_americas.png"
-  },
-  {
-    "name": "Cube Monster",
-    "description": "Be the first champion to reach the top of Mount Kubia in a solo or competitive engine building strategy game",
-    "pledged": 29446,
+    "name": "10 Things I Hate About You",
+    "description": "A witty and rebellious teen romance inspired by Shakespeare’s Taming of the Shrew.",
+    "pledged": 15000,
     "goal": 20000,
-    "backers": 321,
-    "img": "./assets/cube_monster.png"
+    "backers": 1300,
+    "img": "./assets/10_Things_I_Hate_About_You_film.png"
   },
   {
-    "name": "Zoo Tycoon: The Board Game",
-    "description": "Your zoo in a box with more than 230 Animal Meeples. A highly thematic board game experience for 1-4 players.",
-    "pledged": 442602,
-    "goal": 78480,
-    "backers": 3869,
-    "img": "./assets/zoo_tycoon.png"
+    "name": "13 Going on 30",
+    "description": "A teen wakes up as a 30-year-old editor living her dream life—or is it?",
+    "pledged": 12300,
+    "goal": 18000,
+    "backers": 980,
+    "img": "./assets/13_going_on_30.png"
   },
   {
-    "name": "Deity Tarot",
-    "description": "A fully illustrated 78-card tarot deck with a divinely exalted take on the famous Smith-Waite tarot deck.",
-    "pledged": 109,
-    "goal": 8000,
-    "backers": 3,
-    "img": "./assets/deity_tarot.png"
+    "name": "Bridget Jones’s Diary",
+    "description": "A charming singleton documents her misadventures in love, work, and wine.",
+    "pledged": 17300,
+    "goal": 25000,
+    "backers": 1450,
+    "img": "./assets/Bridget_Jones’s_Diary.png"
   },
   {
-    "name": "Camouflage | A hand-painting puzzle/adventure game",
-    "description": "Paint your own camouflage to retrieve information, access secret locations and remove the threat to your fellow flying squirrels.",
-    "pledged": 698,
-    "goal": 5140,
-    "backers": 9,
-    "img": "./assets/camouflage.png"
+    "name": "Crazy Rich Asians",
+    "description": "An American woman discovers her boyfriend is Asia’s most eligible bachelor.",
+    "pledged": 20500,
+    "goal": 20000,
+    "backers": 1720,
+    "img": "./assets/crazy_rich_asians.png"
   },
   {
-    "name": "Beep Bapp Boom",
-    "description": "The time to explode is getting shorter and shorter, please be alert!",
-    "pledged": 44,
-    "goal": 18133,
-    "backers": 2,
-    "img": "./assets/beep_bapp_boom.png"
+    "name": "Crazy Stupid Love",
+    "description": "A man gets dating help from a player after a painful divorce.",
+    "pledged": 13200,
+    "goal": 16000,
+    "backers": 1120,
+    "img": "./assets/crazy_stupid_love.png"
   },
   {
-    "name": "Frosthaven",
-    "description": "Euro-inspired dungeon crawling sequel to the 2017 smash hit Gloomhaven",
-    "pledged": 69608,
-    "goal": 500000,
-    "backers": 3193,
-    "img": "./assets/frosthaven.png"
+    "name": "Friends with Benefits",
+    "description": "Can two friends keep things casual without catching feelings?",
+    "pledged": 9800,
+    "goal": 14000,
+    "backers": 830,
+    "img": "./assets/Friends_with_Benefits.png"
   },
   {
-    "name": "Mislight - An Adventure Game With A Small Touch Of Thriller",
-    "description": "Be the Light in a realm of Darkness",
-    "pledged": 1036,
-    "goal": 3099,
-    "backers": 32,
-    "img": "./assets/mislight.png"
+    "name": "Notting Hill",
+    "description": "A London bookseller falls for a famous American actress.",
+    "pledged": 16400,
+    "goal": 20000,
+    "backers": 1200,
+    "img": "./assets/notting_hill.png"
   },
   {
-    "name": "How to Read Minds 2 Kit: Ellusionist x Peter Turner",
-    "description": "Command Attention With These REAL Mind Reading Techniques That Anyone Can Do... The Contents Inside This Kit Will Silence Skeptics.",
-    "pledged": 147975,
-    "goal": 10000,
-    "backers": 1039,
-    "img": "./assets/how_to_read_minds_2.png"
+    "name": "Pretty Woman",
+    "description": "A modern-day Cinderella story set on the streets of LA.",
+    "pledged": 21000,
+    "goal": 25000,
+    "backers": 1900,
+    "img": "./assets/pretty_woman.png"
   },
   {
-    "name": "A Wayfarer's Tale",
-    "description": "A Wayfarer's Tale, is a Solo to 4 player game where you explore uncharted islands, collecting Treasure while avoiding Monsters.",
-    "pledged": 13039,
-    "goal": 1183,
-    "backers": 1446,
-    "img": "./assets/wayfarers_tale.png"
+    "name": "The Proposal",
+    "description": "A Canadian exec fakes a marriage to avoid deportation—romantic chaos ensues.",
+    "pledged": 15800,
+    "goal": 19000,
+    "backers": 1430,
+    "img": "./assets/the_proposal.png"
   },
   {
-    "name": "Kingdom Death: Monster 1.5",
-    "description": "A cooperative nightmare horror game experience",
-    "pledged": 94139,
-    "goal": 100000,
-    "backers": 9264,
-    "img": "./assets/kingdom_death.png"
+    "name": "To All the Boys I’ve Loved Before",
+    "description": "Secret love letters turn a teenage girl’s world upside down.",
+    "pledged": 14200,
+    "goal": 18000,
+    "backers": 1020,
+    "img": "./assets/To_All_the_Boys_I’ve_Loved_Before.png"
+  },
+  {
+    "name": "When Harry Met Sally",
+    "description": "A tale of friendship, timing, and whether men and women can just be friends.",
+    "pledged": 19800,
+    "goal": 22000,
+    "backers": 1500,
+    "img": "./assets/when_harry_met_sally.png"
   }
-]
-`
-const template = `
-{
-"name": "",
-"description": "",
-"pledged": 0,
-"goal": 0,
-"backers": 0,
-"img": ""
-},
-`
+]`
 
 export default games;
