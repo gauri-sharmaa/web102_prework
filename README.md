@@ -1,23 +1,24 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Love & Laughs Crowdfunding*
 
-Submitted by: **Your Name Here**
+Submitted by: **Gauri Sharma**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Love & Laughs Crowdfunding** is a romantic comedy revival platform that showcases classic romcoms and allows fans to help fund their return to theaters, film festivals, or digital remasters. The site displays which beloved films have reached their funding goals and which still need support.
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [x] The introduction section explains the background of the company and how many films remain unfunded.
+* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded romcoms.
+* [x] The Our Romcoms section initially displays all films available for funding through Love & Laughs Crowdfunding.
+* [x] The Our Romcoms section has three buttons that allow the user to display only unfunded films, only funded films, or all films.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [ ] Custom styling with a pink-and-black color scheme to match the romantic comedy theme.
+* [ ] Custom icons and renaming of the platform for brand alignment.
 
 ## Video Walkthrough
 
@@ -34,11 +35,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One of the trickiest parts was aligning the visual theme with the intended tone while maintaining full functionality. It was also fun to rework the narrative of the site into something playful and genre-specific!
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2024 Gauri Sharma
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
