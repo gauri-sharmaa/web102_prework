@@ -21,8 +21,11 @@ The following **optional** features are implemented:
 * [ ] Custom icons and renaming of the platform for brand alignment.
 
 ## Video Walkthrough
+GIF: https://imgur.com/a/zA813ue
 
 [![Watch the video walkthrough](https://img.youtube.com/vi/4UkYC51N8eo/0.jpg)](https://youtu.be/4UkYC51N8eo)
+
+
 
 
 ## Notes
